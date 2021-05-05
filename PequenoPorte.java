@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class PequenoPorte extends VeiculoNautico {
   int potenciaMotor;
   String tipoCasco;
@@ -42,22 +40,5 @@ public class PequenoPorte extends VeiculoNautico {
   public String getTipoCasco() {
     return tipoCasco;
   }
-
-  // entrada Dados
-  // public void entrada() {
-  // Scanner scan = new Scanner(System.in);
-  // System.out.print("Digite a Potencia do motor: ");
-  // setPotenciaMotor(Integer.parseInt(scan.nextLine()));
-  // System.out.print("Tipo do Casco: ");
-  // setTipoCasco(scan.nextLine());
-  // scan.close();
-  // }
-
-  // imprimir dados
-
-  // public void imprimir() {
-  // System.out.println("A potencia do motor é:" + getPotenciaMotor());
-  // System.out.println("O tipo de casco é:" + getTipoCasco());
-  // }
 
 }

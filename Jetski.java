@@ -66,10 +66,8 @@ public class Jetski extends PequenoPorte {
 
     char resp;
     resp = 't';
-    // while (resp != 's' || resp != 'S' || resp != 'n' || resp != 'N') {
     System.out.print("Seu Jetski tem reboque? S/N ");
     resp = scan.next().charAt(0);
-    // }
     if (resp == 's' || resp == 'S') {
       setReboque(true);
     } else {

@@ -6,7 +6,6 @@ public class Iate extends VeiculoNautico {
   int numeroCabines;
   Boolean piscina;
 
-  // VeiculoNautico veiculo = new Veiculo();
   // contrutores
   public Iate() {
   }
@@ -143,7 +142,6 @@ public class Iate extends VeiculoNautico {
     } else {
       setPiscina(false);
     }
-    scan.close();
   }
 
   // imprimir dados

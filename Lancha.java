@@ -66,10 +66,8 @@ public class Lancha extends PequenoPorte {
 
     char resp;
     resp = 't';
-    // while (resp != 's' || resp != 'S' || resp != 'n' || resp != 'N') {
     System.out.print("Sua Lancha tem Banheiro? S/N ");
     resp = scan.next().charAt(0);
-    // }
     if (resp == 's' || resp == 'S') {
       setBanheiro(true);
     } else {

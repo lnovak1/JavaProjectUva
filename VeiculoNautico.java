@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class VeiculoNautico {
   String marca;
   String modelo;
@@ -138,40 +136,4 @@ public class VeiculoNautico {
   public float getAlturaCalado() {
     return alturaCalado;
   }
-
-  // entrada Dados
-  // public void entrada() {
-  // Scanner scan = new Scanner(System.in);
-  // System.out.print("Digite a Marca do Veiculo: ");
-  // setMarca(scan.nextLine());
-  // System.out.print("Digite o Modelo do Veiculo: ");
-  // setModelo(scan.nextLine());
-  // System.out.print("Digite a Cor do Veiculo: ");
-  // setCor(scan.nextLine());
-  // System.out.print("Digite o número de Passageiros: ");
-  // setNumeroPassageiros(Integer.parseInt(scan.nextLine()));
-  // System.out.print("Digite o preco do Veiculo: ");
-  // setPreco(Float.parseFloat(scan.nextLine()));
-  // System.out.print("Digite a velocidade Maxima: ");
-  // setVelocidadeMaxima(Integer.parseInt(scan.nextLine()));
-  // System.out.print("Digite a Identificação do Veiculo: ");
-  // setIdentificacao(scan.nextLine());
-  // System.out.print("Digite a altura do Calado: ");
-  // setAlturaCalado(Float.parseFloat(scan.nextLine()));
-  // // scan.close();
-  // }
-
-  // imprimir dados
-
-  // public void imprimir() {
-  // System.out.println("Marca do Veiculo: " + getMarca());
-  // System.out.println("Modelo do Veiculo: " + getModelo());
-  // System.out.println("A cor é: " + getCor());
-  // System.out.println("Número de passageiros: " + getNumeroPassageiros());
-  // System.out.println("Preço do Veiculo: " + getPreco());
-  // System.out.println("Velocidade Máxima do Veiculo: " + getVelocidadeMaxima());
-  // System.out.println("Identificação : " + getIdentificacao());
-  // System.out.println("A altura calado: " + getAlturaCalado());
-  // }
-
 }
