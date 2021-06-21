@@ -94,7 +94,7 @@ public class Iate extends VeiculoNautico {
     return numeroCabines;
   }
 
-  public Boolean getPiscina() {
+  public boolean getPiscina() {
     return piscina;
   }
 
