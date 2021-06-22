@@ -1,6 +1,8 @@
+package AIA2.src;
+
 import java.util.Scanner;
-import com.novak.veiculo.Aviao;
-import com.novak.veiculo.Lancha;
+import AIA2.src.com.novak.veiculo.Aviao;
+import AIA2.src.com.novak.veiculo.Lancha;
 
 import java.util.ArrayList;
 import java.util.List;

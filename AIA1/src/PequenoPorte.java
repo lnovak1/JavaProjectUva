@@ -1,3 +1,5 @@
+package AIA1.src;
+
 public class PequenoPorte extends VeiculoNautico {
   int potenciaMotor;
   String tipoCasco;
