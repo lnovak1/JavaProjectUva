@@ -2,7 +2,7 @@ package AIA2.src.com.novak.veiculo;
 
 import java.util.Scanner;
 
-public class Carro extends Veiculo {
+public class Carro extends Veiculo implements Desconto {
     private String placa;
     private Motor motor1 = new Motor();
 
@@ -64,15 +64,22 @@ public class Carro extends Veiculo {
     // imprimir dados
     protected void imprimir() {
 
-        System.out.println("Marca do Veiculo: " + getMarca());
-        System.out.println("Modelo do Veiculo: " + getModelo());
+        System.out.println("Marca do Carro: " + getMarca());
+        System.out.println("Modelo do Carro: " + getModelo());
         System.out.println("A cor é: " + getCor());
-        System.out.println("Preço do Veiculo: " + getPreco());
-        System.out.println("Largura do Veiculo: " + getLargura());
-        System.out.println("Comprimento do Veiculo: " + getComprimento());
+        System.out.println("Preço do Carro: " + getPreco());
+        System.out.println("Largura do Carro: " + getLargura());
+        System.out.println("Comprimento do Carro: " + getComprimento());
 
-        System.out.println("Placa do Veiculo: " + getPlaca());
+        System.out.println("Placa do Carro: " + getPlaca());
         this.motor1.imprimir();
+    }
+
+    //return value with 15% discount
+    @Override
+    public double getValorDesconto(double price) {
+
+        return (price- (price*0.15));
     }
 
 }

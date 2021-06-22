@@ -1,4 +1,7 @@
-package com.novak.veiculo;
+package AIA2.src.com.novak.veiculo;
+
+import java.util.Scanner;
+
 
 public class Aviao extends Veiculo implements Desconto {
     String identificacao;
@@ -81,45 +84,56 @@ public class Aviao extends Veiculo implements Desconto {
         this.motor4 = motor4;
     }
 
-    public String getIdentificacao() {
+    private String getIdentificacao() {
         return identificacao;
     }
 
-    public void setIdentificacao(String identificacao) {
+    private void setIdentificacao(String identificacao) {
         this.identificacao = identificacao;
     }
 
-    public Motor getMotor1() {
-        return motor1;
+    protected void entrada() {
+
+        Scanner ler = new Scanner(System.in);
+
+        System.out.print("Digite a Marca do avião: ");
+        setMarca(ler.nextLine());
+        System.out.print("Digite o Modelo do avião: ");
+        setModelo(ler.nextLine());
+        System.out.print("Digite o Preco  do avião: ");
+        setPreco(Double.parseDouble(ler.nextLine()));
+        System.out.print("Digite a Cor do avião: ");
+        setCor(ler.nextLine());
+        System.out.print("Digite a largura do avião: ");
+        setLargura(Double.parseDouble(ler.nextLine()));
+        System.out.print("Digite a comprimento do avião: ");
+        setComprimento(Double.parseDouble(ler.nextLine()));
+
+        System.out.print("Digite a Identificação do avião: ");
+        setIdentificacao(ler.nextLine());
+        this.motor1.entrada();
+        this.motor2.entrada();
+        this.motor3.entrada();
+        this.motor4.entrada();
+
     }
 
-    public void setMotor1(Motor motor1) {
-        this.motor1 = motor1;
+    // imprimir dados
+    protected void imprimir() {
+
+        System.out.println("Marca do avião: " + getMarca());
+        System.out.println("Modelo do avião: " + getModelo());
+        System.out.println("A cor é: " + getCor());
+        System.out.println("Preço do avião: " + getPreco());
+        System.out.println("Largura do avião: " + getLargura());
+        System.out.println("Comprimento do avião: " + getComprimento());
+        System.out.println("Identificação do avião: " + getIdentificacao());
+        this.motor1.imprimir();
+        this.motor2.imprimir();
+        this.motor3.imprimir();
+        this.motor4.imprimir();
     }
 
-    public Motor getMotor2() {
-        return motor2;
-    }
-
-    public void setMotor2(Motor motor2) {
-        this.motor2 = motor2;
-    }
-
-    public Motor getMotor3() {
-        return motor3;
-    }
-
-    public void setMotor3(Motor motor3) {
-        this.motor3 = motor3;
-    }
-
-    public Motor getMotor4() {
-        return motor4;
-    }
-
-    public void setMotor4(Motor motor4) {
-        this.motor4 = motor4;
-    }
 
     //return price with 8% discount
     @Override

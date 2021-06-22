@@ -1,179 +1,202 @@
 package AIA2.src.com.novak.veiculo;
 
+import java.util.Scanner;
 
 public class Lancha extends Veiculo implements Desconto{
-    String nome;
-    Motor motor1 = new Motor();
-    Motor motor2 = new Motor();
+    private String nome;
+    private Motor motor1 = new Motor();
+    private Motor motor2 = new Motor();
 
 
 
-    public Lancha(String nome, Motor motor1, Motor motor2) {
+    protected Lancha(String nome, Motor motor1, Motor motor2) {
         this.nome = nome;
         this.motor1 = motor1;
         this.motor2 = motor2;
     }
 
-    public Lancha(String marca, String modelo, String cor, double preco, double largura, double comprimento, String nome) {
+    protected Lancha(String marca, String modelo, String cor, double preco, double largura, double comprimento, String nome) {
         super(marca, modelo, cor, preco, largura, comprimento);
         this.nome = nome;
     }
 
-    public Lancha(String marca, String modelo, String nome) {
+    protected Lancha(String marca, String modelo, String nome) {
         super(marca, modelo);
         this.nome = nome;
     }
 
-    public Lancha(String marca, String modelo, String cor, String nome) {
+    protected Lancha(String marca, String modelo, String cor, String nome) {
         super(marca, modelo, cor);
         this.nome = nome;
     }
 
-    public Lancha(String marca, String modelo, String cor, double preco, String nome) {
+    protected Lancha(String marca, String modelo, String cor, double preco, String nome) {
         super(marca, modelo, cor, preco);
         this.nome = nome;
     }
 
-    public Lancha(String marca, String modelo, String cor, double preco, double largura, String nome) {
+    protected Lancha(String marca, String modelo, String cor, double preco, double largura, String nome) {
         super(marca, modelo, cor, preco, largura);
         this.nome = nome;
     }
 
-    public Lancha(double preco, double largura, String nome) {
+    protected Lancha(double preco, double largura, String nome) {
         super(preco, largura);
         this.nome = nome;
     }
 
-    public Lancha(String marca, String modelo, String cor, double preco, double largura, double comprimento, String nome, Motor motor1) {
+    protected Lancha(String marca, String modelo, String cor, double preco, double largura, double comprimento, String nome, Motor motor1) {
         super(marca, modelo, cor, preco, largura, comprimento);
         this.nome = nome;
         this.motor1 = motor1;
     }
 
-    public Lancha(String marca, String modelo, String nome, Motor motor1) {
+    protected Lancha(String marca, String modelo, String nome, Motor motor1) {
         super(marca, modelo);
         this.nome = nome;
         this.motor1 = motor1;
     }
 
-    public Lancha(String marca, String modelo, String cor, String nome, Motor motor1) {
+    protected Lancha(String marca, String modelo, String cor, String nome, Motor motor1) {
         super(marca, modelo, cor);
         this.nome = nome;
         this.motor1 = motor1;
     }
 
-    public Lancha(String marca, String modelo, String cor, double preco, String nome, Motor motor1) {
+    protected Lancha(String marca, String modelo, String cor, double preco, String nome, Motor motor1) {
         super(marca, modelo, cor, preco);
         this.nome = nome;
         this.motor1 = motor1;
     }
 
-    public Lancha(String marca, String modelo, String cor, double preco, double largura, String nome, Motor motor1) {
+    protected Lancha(String marca, String modelo, String cor, double preco, double largura, String nome, Motor motor1) {
         super(marca, modelo, cor, preco, largura);
         this.nome = nome;
         this.motor1 = motor1;
     }
 
-    public Lancha(double preco, double largura, String nome, Motor motor1) {
+    protected Lancha(double preco, double largura, String nome, Motor motor1) {
         super(preco, largura);
         this.nome = nome;
         this.motor1 = motor1;
     }
 
-    public Lancha(String marca, String modelo, String cor, double preco, double largura, double comprimento, String nome, Motor motor1, Motor motor2) {
+    protected Lancha(String marca, String modelo, String cor, double preco, double largura, double comprimento, String nome, Motor motor1, Motor motor2) {
         super(marca, modelo, cor, preco, largura, comprimento);
         this.nome = nome;
         this.motor1 = motor1;
         this.motor2 = motor2;
     }
 
-    public Lancha(String marca, String modelo, String nome, Motor motor1, Motor motor2) {
+    protected Lancha(String marca, String modelo, String nome, Motor motor1, Motor motor2) {
         super(marca, modelo);
         this.nome = nome;
         this.motor1 = motor1;
         this.motor2 = motor2;
     }
 
-    public Lancha(String marca, String modelo, String cor, String nome, Motor motor1, Motor motor2) {
+    protected Lancha(String marca, String modelo, String cor, String nome, Motor motor1, Motor motor2) {
         super(marca, modelo, cor);
         this.nome = nome;
         this.motor1 = motor1;
         this.motor2 = motor2;
     }
 
-    public Lancha(String marca, String modelo, String cor, double preco, String nome, Motor motor1, Motor motor2) {
+    protected Lancha(String marca, String modelo, String cor, double preco, String nome, Motor motor1, Motor motor2) {
         super(marca, modelo, cor, preco);
         this.nome = nome;
         this.motor1 = motor1;
         this.motor2 = motor2;
     }
 
-    public Lancha(String marca, String modelo, String cor, double preco, double largura, String nome, Motor motor1, Motor motor2) {
+    protected Lancha(String marca, String modelo, String cor, double preco, double largura, String nome, Motor motor1, Motor motor2) {
         super(marca, modelo, cor, preco, largura);
         this.nome = nome;
         this.motor1 = motor1;
         this.motor2 = motor2;
     }
 
-    public Lancha(double preco, double largura, String nome, Motor motor1, Motor motor2) {
+    protected Lancha(double preco, double largura, String nome, Motor motor1, Motor motor2) {
         super(preco, largura);
         this.nome = nome;
         this.motor1 = motor1;
         this.motor2 = motor2;
     }
 
-    public Lancha(double preco, double largura, double comprimento, String nome, Motor motor1, Motor motor2) {
+    protected Lancha(double preco, double largura, double comprimento, String nome, Motor motor1, Motor motor2) {
         super(preco, largura, comprimento);
         this.nome = nome;
         this.motor1 = motor1;
         this.motor2 = motor2;
     }
 
-    public Lancha(Motor motor1) {
+    protected Lancha(Motor motor1) {
         this.motor1 = motor1;
     }
 
-    public Lancha(String nome) {
+    protected Lancha(String nome) {
         this.nome = nome;
     }
 
-    public Lancha(Motor motor1, Motor motor2) {
+    protected Lancha(Motor motor1, Motor motor2) {
         this.motor1 = motor1;
         this.motor2 = motor2;
     }
 
-    public Lancha(String nome, Motor motor1) {
+    protected Lancha(String nome, Motor motor1) {
         this.nome = nome;
         this.motor1 = motor1;
     }
 
 
     //    getters and setter
-    public String getNome() {
+    private String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
+    private void setNome(String nome) {
         this.nome = nome;
     }
 
-    public Motor getMotor1() {
-        return motor1;
+    protected Lancha() {
     }
 
-    public void setMotor1(Motor motor1) {
-        this.motor1 = motor1;
+    protected void entrada() {
+
+        Scanner ler = new Scanner(System.in);
+
+        System.out.print("Digite o Nome da lancha: ");
+        setNome(ler.nextLine());
+        System.out.print("Digite a Marca da lancha: ");
+        setMarca(ler.nextLine());
+        System.out.print("Digite o Modelo da lancha: ");
+        setModelo(ler.nextLine());
+        System.out.print("Digite o Preco  da lancha: ");
+        setPreco(Double.parseDouble(ler.nextLine()));
+        System.out.print("Digite a Cor da lancha: ");
+        setCor(ler.nextLine());
+        System.out.print("Digite a largura da lancha: ");
+        setLargura(Double.parseDouble(ler.nextLine()));
+        System.out.print("Digite a comprimento da lancha: ");
+        setComprimento(Double.parseDouble(ler.nextLine()));
+
+        this.motor1.entrada();
+        this.motor2.entrada();
+
     }
 
-    public Motor getMotor2() {
-        return motor2;
-    }
+    // imprimir dados
+    protected void imprimir() {
 
-    public void setMotor2(Motor motor2) {
-        this.motor2 = motor2;
-    }
-
-    public Lancha() {
+        System.out.println("Nome da lancha: " + getNome());
+        System.out.println("Marca da lancha: " + getMarca());
+        System.out.println("Modelo da lancha: " + getModelo());
+        System.out.println("A cor é: " + getCor());
+        System.out.println("Preço da lancha: " + getPreco());
+        System.out.println("Largura da lancha: " + getLargura());
+        System.out.println("Comprimento da lancha: " + getComprimento());
+        this.motor1.imprimir();
+        this.motor2.imprimir();
     }
 
     //return value with 10% discount
