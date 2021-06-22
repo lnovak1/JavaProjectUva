@@ -1,4 +1,4 @@
-package AIA2.src.com.novak.veiculo;
+package com.novak.veiculo;
 
 class Veiculo {
     protected String marca;
@@ -50,12 +50,12 @@ class Veiculo {
         this.largura = largura;
     }
 
-    protected Veiculo(double preco, double largura) {
+    protected  Veiculo(double preco, double largura) {
         this.preco = preco;
         this.largura = largura;
     }
 
-    protected Veiculo(double preco, double largura, double comprimento) {
+    protected  Veiculo(double preco, double largura, double comprimento) {
         this.preco = preco;
         this.largura = largura;
         this.comprimento = comprimento;
