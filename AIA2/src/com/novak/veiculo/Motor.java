@@ -22,15 +22,15 @@ class Motor {
 //      this makes no sense to exist. Only exist to fit 5 constructor obligation since motor
 //      needs all items and or it will be already constructed
 //      or it will be constructed
-    private Motor(double peso) {
+    protected Motor(double peso) {
         this.peso = peso;
     }
 
-    private Motor(int rpm) {
+    protected Motor(int rpm) {
         this.rpm = rpm;
     }
 
-    private Motor(String tipo) {
+    protected Motor(String tipo) {
         this.tipo = tipo;
     }
 
