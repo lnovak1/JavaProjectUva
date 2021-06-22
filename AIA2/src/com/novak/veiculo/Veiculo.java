@@ -1,4 +1,4 @@
-package com.novak.veiculo;
+package AIA2.src.com.novak.veiculo;
 
 class Veiculo {
     protected String marca;
@@ -11,7 +11,7 @@ class Veiculo {
     protected Veiculo() {
     };
 
-    private Veiculo(String marca, String modelo, String cor, double preco, double largura, double comprimento) {
+    protected Veiculo(String marca, String modelo, String cor, double preco, double largura, double comprimento) {
         this.marca = marca;
         this.modelo = modelo;
         this.cor = cor;
@@ -24,89 +24,89 @@ class Veiculo {
     //      or it will be constructed
 
 
-    private Veiculo(String marca, String modelo) {
+    protected Veiculo(String marca, String modelo) {
         this.marca = marca;
         this.modelo = modelo;
     }
 
-    private Veiculo(String marca, String modelo, String cor) {
-        this.marca = marca;
-        this.modelo = modelo;
-        this.cor = cor;
-    }
-
-    private Veiculo(String marca, String modelo, String cor, double preco) {
+    protected Veiculo(String marca, String modelo, String cor) {
         this.marca = marca;
         this.modelo = modelo;
         this.cor = cor;
-        this.preco = preco;
     }
 
-    private Veiculo(String marca, String modelo, String cor, double preco, double largura) {
+    protected Veiculo(String marca, String modelo, String cor, double preco) {
         this.marca = marca;
         this.modelo = modelo;
         this.cor = cor;
         this.preco = preco;
-        this.largura = largura;
     }
 
-    private Veiculo(double preco, double largura) {
+    protected Veiculo(String marca, String modelo, String cor, double preco, double largura) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.cor = cor;
         this.preco = preco;
         this.largura = largura;
     }
 
-    private Veiculo(double preco, double largura, double comprimento) {
+    protected Veiculo(double preco, double largura) {
+        this.preco = preco;
+        this.largura = largura;
+    }
+
+    protected Veiculo(double preco, double largura, double comprimento) {
         this.preco = preco;
         this.largura = largura;
         this.comprimento = comprimento;
     }
 
     // getters and setters
-    private String getMarca() {
+    protected String getMarca() {
         return marca;
     }
 
-    private void setMarca(String marca) {
+    protected void setMarca(String marca) {
         this.marca = marca;
     }
 
-    private String getModelo() {
+    protected String getModelo() {
         return modelo;
     }
 
-    private void setModelo(String modelo) {
+    protected void setModelo(String modelo) {
         this.modelo = modelo;
     }
 
-    private String getCor() {
+    protected String getCor() {
         return cor;
     }
 
-    private void setCor(String cor) {
+    protected void setCor(String cor) {
         this.cor = cor;
     }
 
-    private double getPreco() {
+    protected double getPreco() {
         return preco;
     }
 
-    private void setPreco(double preco) {
+    protected void setPreco(double preco) {
         this.preco = preco;
     }
 
-    private double getLargura() {
+    protected double getLargura() {
         return largura;
     }
 
-    private void setLargura(double largura) {
+    protected void setLargura(double largura) {
         this.largura = largura;
     }
 
-    private double getComprimento() {
+    protected double getComprimento() {
         return comprimento;
     }
 
-    private void setComprimento(double comprimento) {
+    protected void setComprimento(double comprimento) {
         this.comprimento = comprimento;
     }
 }

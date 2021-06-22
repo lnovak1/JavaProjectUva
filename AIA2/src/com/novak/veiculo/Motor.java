@@ -1,4 +1,4 @@
-package com.novak.veiculo;
+package AIA2.src.com.novak.veiculo;
 
 class Motor {
     protected double peso;
