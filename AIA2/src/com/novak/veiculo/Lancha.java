@@ -158,10 +158,10 @@ public class Lancha extends Veiculo implements Desconto{
         this.nome = nome;
     }
 
-    protected Lancha() {
+    public Lancha() {
     }
 
-    protected void entrada() {
+    public void entrada() {
 
         Scanner scan = new Scanner(System.in);
 
@@ -188,7 +188,7 @@ public class Lancha extends Veiculo implements Desconto{
     }
 
     // imprimir dados
-    protected void imprimir() {
+    public void imprimir() {
 
         System.out.println("Nome da lancha: " + getNome());
         System.out.println("Marca da lancha: " + getMarca());

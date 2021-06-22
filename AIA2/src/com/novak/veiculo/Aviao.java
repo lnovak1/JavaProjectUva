@@ -94,7 +94,7 @@ public class Aviao extends Veiculo implements Desconto {
         this.identificacao = identificacao;
     }
 
-    protected void entrada() {
+    public void entrada() {
 
         Scanner scan = new Scanner(System.in);
 
@@ -123,7 +123,7 @@ public class Aviao extends Veiculo implements Desconto {
     }
 
     // imprimir dados
-    protected void imprimir() {
+    public void imprimir() {
 
         System.out.println("Marca do avião: " + getMarca());
         System.out.println("Modelo do avião: " + getModelo());

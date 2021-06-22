@@ -6,7 +6,7 @@ public class Carro extends Veiculo implements Desconto {
     private String placa;
     private Motor motor1 = new Motor();
 
-    protected Carro() {
+    public Carro() {
     }
 
     protected Carro(String placa, String marca, String modelo, String cor, double preco, double largura) {
@@ -39,7 +39,7 @@ public class Carro extends Veiculo implements Desconto {
         this.placa = placa;
     }
 
-    protected void entrada() {
+    public void entrada() {
 
         Scanner scan = new Scanner(System.in);
         System.out.print("Digite a Marca do Carro: ");
@@ -63,7 +63,7 @@ public class Carro extends Veiculo implements Desconto {
     }
 
     // imprimir dados
-    protected void imprimir() {
+    public void imprimir() {
 
         System.out.println("Marca do Carro: " + getMarca());
         System.out.println("Modelo do Carro: " + getModelo());
