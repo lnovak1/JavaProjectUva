@@ -4,14 +4,14 @@ class Veiculo {
     protected String marca;
     protected String modelo;
     protected String cor;
-    protected String preco;
+    protected double preco;
     protected double largura;
     protected double comprimento;
 
     protected Veiculo() {
     };
 
-    private Veiculo(String marca, String modelo, String cor, String preco, double largura, double comprimento) {
+    private Veiculo(String marca, String modelo, String cor, double preco, double largura, double comprimento) {
         this.marca = marca;
         this.modelo = modelo;
         this.cor = cor;
@@ -35,14 +35,14 @@ class Veiculo {
         this.cor = cor;
     }
 
-    private Veiculo(String marca, String modelo, String cor, String preco) {
+    private Veiculo(String marca, String modelo, String cor, double preco) {
         this.marca = marca;
         this.modelo = modelo;
         this.cor = cor;
         this.preco = preco;
     }
 
-    private Veiculo(String marca, String modelo, String cor, String preco, double largura) {
+    private Veiculo(String marca, String modelo, String cor, double preco, double largura) {
         this.marca = marca;
         this.modelo = modelo;
         this.cor = cor;
@@ -50,12 +50,12 @@ class Veiculo {
         this.largura = largura;
     }
 
-    private Veiculo(String preco, double largura) {
+    private Veiculo(double preco, double largura) {
         this.preco = preco;
         this.largura = largura;
     }
 
-    private Veiculo(String preco, double largura, double comprimento) {
+    private Veiculo(double preco, double largura, double comprimento) {
         this.preco = preco;
         this.largura = largura;
         this.comprimento = comprimento;
@@ -86,11 +86,11 @@ class Veiculo {
         this.cor = cor;
     }
 
-    private String getPreco() {
+    private double getPreco() {
         return preco;
     }
 
-    private void setPreco(String preco) {
+    private void setPreco(double preco) {
         this.preco = preco;
     }
 
