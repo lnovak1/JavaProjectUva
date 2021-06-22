@@ -11,7 +11,7 @@ class Veiculo {
     protected Veiculo() {
     };
 
-    protected Veiculo(String marca, String modelo, String cor, double preco, double largura, double comprimento) {
+    protected  Veiculo(String marca, String modelo, String cor, double preco, double largura, double comprimento) {
         this.marca = marca;
         this.modelo = modelo;
         this.cor = cor;
@@ -24,25 +24,25 @@ class Veiculo {
     //      or it will be constructed
 
 
-    protected Veiculo(String marca, String modelo) {
+    protected  Veiculo(String marca, String modelo) {
         this.marca = marca;
         this.modelo = modelo;
     }
 
-    protected Veiculo(String marca, String modelo, String cor) {
+    protected  Veiculo(String marca, String modelo, String cor) {
         this.marca = marca;
         this.modelo = modelo;
         this.cor = cor;
     }
 
-    protected Veiculo(String marca, String modelo, String cor, double preco) {
+    protected  Veiculo(String marca, String modelo, String cor, double preco) {
         this.marca = marca;
         this.modelo = modelo;
         this.cor = cor;
         this.preco = preco;
     }
 
-    protected Veiculo(String marca, String modelo, String cor, double preco, double largura) {
+    protected  Veiculo(String marca, String modelo, String cor, double preco, double largura) {
         this.marca = marca;
         this.modelo = modelo;
         this.cor = cor;
@@ -62,51 +62,51 @@ class Veiculo {
     }
 
     // getters and setters
-    protected String getMarca() {
+    protected  String getMarca() {
         return marca;
     }
 
-    protected void setMarca(String marca) {
+    protected  void setMarca(String marca) {
         this.marca = marca;
     }
 
-    protected String getModelo() {
+    protected  String getModelo() {
         return modelo;
     }
 
-    protected void setModelo(String modelo) {
+    protected  void setModelo(String modelo) {
         this.modelo = modelo;
     }
 
-    protected String getCor() {
+    protected  String getCor() {
         return cor;
     }
 
-    protected void setCor(String cor) {
+    protected  void setCor(String cor) {
         this.cor = cor;
     }
 
-    protected double getPreco() {
+    protected  double getPreco() {
         return preco;
     }
 
-    protected void setPreco(double preco) {
+    protected  void setPreco(double preco) {
         this.preco = preco;
     }
 
-    protected double getLargura() {
+    protected  double getLargura() {
         return largura;
     }
 
-    protected void setLargura(double largura) {
+    protected  void setLargura(double largura) {
         this.largura = largura;
     }
 
-    protected double getComprimento() {
+    protected  double getComprimento() {
         return comprimento;
     }
 
-    protected void setComprimento(double comprimento) {
+    protected  void setComprimento(double comprimento) {
         this.comprimento = comprimento;
     }
 }
