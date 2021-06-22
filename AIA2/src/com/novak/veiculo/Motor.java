@@ -20,10 +20,10 @@ class Motor {
         this.preco = preco;
     }
 
-
-//      this makes no sense to exist. Only exist to fit 5 constructor obligation since motor
-//      needs all items and or it will be already constructed
-//      or it will be constructed
+    // this makes no sense to exist. Only exist to fit 5 constructor obligation
+    // since motor
+    // needs all items and or it will be already constructed
+    // or it will be constructed
     protected Motor(double peso) {
         this.peso = peso;
     }
@@ -36,7 +36,7 @@ class Motor {
         this.tipo = tipo;
     }
 
-//    getters and setters
+    // getters and setters
 
     protected double getPeso() {
         return peso;
@@ -80,23 +80,24 @@ class Motor {
 
     protected void entrada() {
 
-        Scanner ler = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         System.out.print("Digite a peso do motor: ");
-        setPeso(Double.parseDouble(ler.nextLine()));
+        setPeso(Double.parseDouble(scan.nextLine()));
 
         System.out.print("Digite o Rpm do motor: ");
-        setRpm(Integer.parseInt(ler.nextLine()));
+        setRpm(Integer.parseInt(scan.nextLine()));
 
         System.out.print("Digite o Preço  do motor: ");
-        setPreco(Double.parseDouble(ler.nextLine()));
+        setPreco(Double.parseDouble(scan.nextLine()));
 
         System.out.print("Digite a velocidade do motor: ");
-        setVelocidade(Integer.parseInt(ler.nextLine()));
+        setVelocidade(Integer.parseInt(scan.nextLine()));
 
         System.out.print("Digite a tipo do motor: ");
-        setTipo(ler.nextLine());
+        setTipo(scan.nextLine());
 
+        scan.close();
     }
 
     // imprimir dados
@@ -106,6 +107,6 @@ class Motor {
         System.out.println("Rpm do Motor: " + getRpm());
         System.out.println("Preço do Motor: " + getPreco());
         System.out.println("Velocidade do motor: " + getVelocidade());
-        System.out.println("Tipo do Veiculo: " + getTipo());
+        System.out.println("Tipo do Motor: " + getTipo());
     }
 }

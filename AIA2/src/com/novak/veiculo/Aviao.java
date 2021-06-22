@@ -1,6 +1,8 @@
 package AIA2.src.com.novak.veiculo;
 
+
 import java.util.Scanner;
+
 
 
 public class Aviao extends Veiculo implements Desconto {
@@ -94,27 +96,29 @@ public class Aviao extends Veiculo implements Desconto {
 
     protected void entrada() {
 
-        Scanner ler = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         System.out.print("Digite a Marca do avião: ");
-        setMarca(ler.nextLine());
+        setMarca(scan.nextLine());
         System.out.print("Digite o Modelo do avião: ");
-        setModelo(ler.nextLine());
+        setModelo(scan.nextLine());
         System.out.print("Digite o Preco  do avião: ");
-        setPreco(Double.parseDouble(ler.nextLine()));
+        setPreco(Double.parseDouble(scan.nextLine()));
         System.out.print("Digite a Cor do avião: ");
-        setCor(ler.nextLine());
+        setCor(scan.nextLine());
         System.out.print("Digite a largura do avião: ");
-        setLargura(Double.parseDouble(ler.nextLine()));
+        setLargura(Double.parseDouble(scan.nextLine()));
         System.out.print("Digite a comprimento do avião: ");
-        setComprimento(Double.parseDouble(ler.nextLine()));
+        setComprimento(Double.parseDouble(scan.nextLine()));
 
         System.out.print("Digite a Identificação do avião: ");
-        setIdentificacao(ler.nextLine());
+        setIdentificacao(scan.nextLine());
         this.motor1.entrada();
         this.motor2.entrada();
         this.motor3.entrada();
         this.motor4.entrada();
+
+        scan.close();
 
     }
 

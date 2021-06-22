@@ -41,24 +41,25 @@ public class Carro extends Veiculo implements Desconto {
 
     protected void entrada() {
 
-        Scanner ler = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         System.out.print("Digite a Marca do Carro: ");
-        setMarca(ler.nextLine());
+        setMarca(scan.nextLine());
         System.out.print("Digite o Modelo do Carro: ");
-        setModelo(ler.nextLine());
+        setModelo(scan.nextLine());
         System.out.print("Digite o Preco  do Carro: ");
-        setPreco(Double.parseDouble(ler.nextLine()));
+        setPreco(Double.parseDouble(scan.nextLine()));
         System.out.print("Digite a Cor do Carro: ");
-        setCor(ler.nextLine());
+        setCor(scan.nextLine());
         System.out.print("Digite a largura do Carro: ");
-        setLargura(Double.parseDouble(ler.nextLine()));
+        setLargura(Double.parseDouble(scan.nextLine()));
         System.out.print("Digite a comprimento do Carro: ");
-        setComprimento(Double.parseDouble(ler.nextLine()));
+        setComprimento(Double.parseDouble(scan.nextLine()));
 
         System.out.print("Digite a Placa do Carro: ");
-        setPlaca(ler.nextLine());
+        setPlaca(scan.nextLine());
         this.motor1.entrada();
 
+        scan.close();
     }
 
     // imprimir dados

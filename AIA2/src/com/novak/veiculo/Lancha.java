@@ -163,25 +163,27 @@ public class Lancha extends Veiculo implements Desconto{
 
     protected void entrada() {
 
-        Scanner ler = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         System.out.print("Digite o Nome da lancha: ");
-        setNome(ler.nextLine());
+        setNome(scan.nextLine());
         System.out.print("Digite a Marca da lancha: ");
-        setMarca(ler.nextLine());
+        setMarca(scan.nextLine());
         System.out.print("Digite o Modelo da lancha: ");
-        setModelo(ler.nextLine());
+        setModelo(scan.nextLine());
         System.out.print("Digite o Preco  da lancha: ");
-        setPreco(Double.parseDouble(ler.nextLine()));
+        setPreco(Double.parseDouble(scan.nextLine()));
         System.out.print("Digite a Cor da lancha: ");
-        setCor(ler.nextLine());
+        setCor(scan.nextLine());
         System.out.print("Digite a largura da lancha: ");
-        setLargura(Double.parseDouble(ler.nextLine()));
+        setLargura(Double.parseDouble(scan.nextLine()));
         System.out.print("Digite a comprimento da lancha: ");
-        setComprimento(Double.parseDouble(ler.nextLine()));
+        setComprimento(Double.parseDouble(scan.nextLine()));
 
         this.motor1.entrada();
         this.motor2.entrada();
+
+        scan.close();
 
     }
 
