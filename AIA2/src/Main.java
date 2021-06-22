@@ -1,9 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import com.novak.veiculo.Iate;
-import com.novak.veiculo.Jetski;
-import com.novak.veiculo.Lancha;
 
 public class Main {
   public static void main(String[] args) {
