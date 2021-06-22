@@ -1,5 +1,3 @@
-package AIA1.src;
-
 import java.util.Scanner;
 
 public class Iate extends VeiculoNautico {
@@ -96,7 +94,7 @@ public class Iate extends VeiculoNautico {
     return numeroCabines;
   }
 
-  public boolean getPiscina() {
+  public Boolean getPiscina() {
     return piscina;
   }
 

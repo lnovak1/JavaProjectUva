@@ -1,5 +1,3 @@
-package AIA1.src;
-
 import java.util.Scanner;
 
 public class Lancha extends PequenoPorte {

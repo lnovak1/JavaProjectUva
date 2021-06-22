@@ -1,5 +1,3 @@
-package AIA1.src;
-
 public class VeiculoNautico {
   String marca;
   String modelo;
