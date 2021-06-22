@@ -1,5 +1,7 @@
 package AIA2.src.com.novak.veiculo;
 
+import java.util.Scanner;
+
 class Motor {
     protected double peso;
     protected int rpm;
@@ -74,5 +76,36 @@ class Motor {
 
     protected void setPreco(double preco) {
         this.preco = preco;
+    }
+
+    protected void entrada() {
+
+        Scanner ler = new Scanner(System.in);
+
+        System.out.print("Digite a peso do motor: ");
+        setPeso(Double.parseDouble(ler.nextLine()));
+
+        System.out.print("Digite o Rpm do motor: ");
+        setRpm(Integer.parseInt(ler.nextLine()));
+
+        System.out.print("Digite o Preço  do motor: ");
+        setPreco(Double.parseDouble(ler.nextLine()));
+
+        System.out.print("Digite a velocidade do motor: ");
+        setVelocidade(Integer.parseInt(ler.nextLine()));
+
+        System.out.print("Digite a tipo do motor: ");
+        setTipo(ler.nextLine());
+
+    }
+
+    // imprimir dados
+    protected void imprimir() {
+
+        System.out.println("Peso do Motor: " + getPeso());
+        System.out.println("Rpm do Motor: " + getRpm());
+        System.out.println("Preço do Motor: " + getPreco());
+        System.out.println("Velocidade do motor: " + getVelocidade());
+        System.out.println("Tipo do Veiculo: " + getTipo());
     }
 }

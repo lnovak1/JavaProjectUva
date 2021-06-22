@@ -2,8 +2,6 @@ package AIA2.src.com.novak.veiculo;
 
 import java.util.Scanner;
 
-import AIA2.src.com.novak.veiculo.Veiculo;
-
 public class Carro extends Veiculo {
     private String placa;
     private Motor motor1 = new Motor();
