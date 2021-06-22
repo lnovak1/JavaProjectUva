@@ -94,7 +94,7 @@ public class Aviao extends Veiculo implements Desconto {
         this.identificacao = identificacao;
     }
 
-    public void entrada() {
+    public void entradaDados() {
 
         Scanner scan = new Scanner(System.in);
 
@@ -113,12 +113,15 @@ public class Aviao extends Veiculo implements Desconto {
 
         System.out.print("Digite a Identificação do avião: ");
         setIdentificacao(scan.nextLine());
-        this.motor1.entrada();
-        this.motor2.entrada();
-        this.motor3.entrada();
-        this.motor4.entrada();
+        System.out.println("dados do motor 1:");
+        this.motor1.entradaDados();
+        System.out.println("dados do motor 2:");
+        this.motor2.entradaDados();
+        System.out.println("dados do motor 3:");
+        this.motor3.entradaDados();
+        System.out.println("dados do motor 4:");
+        this.motor4.entradaDados();
 
-        scan.close();
 
     }
 
@@ -132,10 +135,15 @@ public class Aviao extends Veiculo implements Desconto {
         System.out.println("Largura do avião: " + getLargura());
         System.out.println("Comprimento do avião: " + getComprimento());
         System.out.println("Identificação do avião: " + getIdentificacao());
+        System.out.println("dados do motor 1:");
         this.motor1.imprimir();
+        System.out.println("dados do motor 2:");
         this.motor2.imprimir();
+        System.out.println("dados do motor 3:");
         this.motor3.imprimir();
+        System.out.println("dados do motor 4:");
         this.motor4.imprimir();
+        System.out.println("Preco com desconto" + getValorDesconto(getPreco()));
     }
 
 

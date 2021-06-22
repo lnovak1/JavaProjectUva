@@ -39,7 +39,7 @@ public class Carro extends Veiculo implements Desconto {
         this.placa = placa;
     }
 
-    public void entrada() {
+    public void entradaDados() {
 
         Scanner scan = new Scanner(System.in);
         System.out.print("Digite a Marca do Carro: ");
@@ -57,9 +57,9 @@ public class Carro extends Veiculo implements Desconto {
 
         System.out.print("Digite a Placa do Carro: ");
         setPlaca(scan.nextLine());
-        this.motor1.entrada();
+        System.out.println("dados do motor 1:");
+        this.motor1.entradaDados();
 
-        scan.close();
     }
 
     // imprimir dados
@@ -74,6 +74,7 @@ public class Carro extends Veiculo implements Desconto {
 
         System.out.println("Placa do Carro: " + getPlaca());
         this.motor1.imprimir();
+        System.out.println("Preco com desconto" + getValorDesconto(getPreco()));
     }
 
     //return value with 15% discount

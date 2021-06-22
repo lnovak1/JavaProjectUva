@@ -15,7 +15,7 @@ public class Lancha extends Veiculo implements Desconto{
         this.motor2 = motor2;
     }
 
-    protected Lancha(String marca, String modelo, String cor, double preco, double largura, double comprimento, String nome) {
+    public Lancha(String marca, String modelo, String cor, double preco, double largura, double comprimento, String nome) {
         super(marca, modelo, cor, preco, largura, comprimento);
         this.nome = nome;
     }
@@ -150,7 +150,7 @@ public class Lancha extends Veiculo implements Desconto{
 
 
     //    getters and setter
-    private String getNome() {
+    public String getNome() {
         return nome;
     }
 
@@ -161,7 +161,7 @@ public class Lancha extends Veiculo implements Desconto{
     public Lancha() {
     }
 
-    public void entrada() {
+    public void entradaDados() {
 
         Scanner scan = new Scanner(System.in);
 
@@ -179,11 +179,10 @@ public class Lancha extends Veiculo implements Desconto{
         setLargura(Double.parseDouble(scan.nextLine()));
         System.out.print("Digite a comprimento da lancha: ");
         setComprimento(Double.parseDouble(scan.nextLine()));
-
-        this.motor1.entrada();
-        this.motor2.entrada();
-
-        scan.close();
+        System.out.println("dados do motor 1:");
+        this.motor1.entradaDados();
+        System.out.println("dados do motor 2:");
+        this.motor2.entradaDados();
 
     }
 
@@ -197,8 +196,11 @@ public class Lancha extends Veiculo implements Desconto{
         System.out.println("Preço da lancha: " + getPreco());
         System.out.println("Largura da lancha: " + getLargura());
         System.out.println("Comprimento da lancha: " + getComprimento());
+        System.out.println("dados do motor 1:");
         this.motor1.imprimir();
+        System.out.println("dados do motor 2:");
         this.motor2.imprimir();
+        System.out.println("Preco com desconto" + getValorDesconto(getPreco()));
     }
 
     //return value with 10% discount

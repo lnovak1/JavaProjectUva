@@ -2,7 +2,9 @@ package AIA2.src.com.novak.veiculo;
 
 import java.util.Scanner;
 
-class Motor {
+
+
+class Motor{
     protected double peso;
     protected int rpm;
     protected int velocidade;
@@ -10,7 +12,7 @@ class Motor {
     protected double preco;
 
     protected Motor() {
-    };
+    }
 
     protected Motor(double peso, int rpm, int velocidade, String tipo, double preco) {
         this.peso = peso;
@@ -24,67 +26,66 @@ class Motor {
     // since motor
     // needs all items and or it will be already constructed
     // or it will be constructed
-    protected Motor(double peso) {
+    private Motor(double peso) {
         this.peso = peso;
     }
 
-    protected Motor(int rpm) {
+    private Motor(int rpm) {
         this.rpm = rpm;
     }
 
-    protected Motor(String tipo) {
+    private Motor(String tipo) {
         this.tipo = tipo;
     }
 
     // getters and setters
 
-    protected double getPeso() {
+    public double getPeso() {
         return peso;
     }
 
-    protected void setPeso(double peso) {
+    private void setPeso(double peso) {
         this.peso = peso;
     }
 
-    protected int getRpm() {
+    public int getRpm() {
         return rpm;
     }
 
-    protected void setRpm(int rpm) {
+    private void setRpm(int rpm) {
         this.rpm = rpm;
     }
 
-    protected int getVelocidade() {
+    public int getVelocidade() {
         return velocidade;
     }
 
-    protected void setVelocidade(int velocidade) {
+    private void setVelocidade(int velocidade) {
         this.velocidade = velocidade;
     }
 
-    protected String getTipo() {
+    public String getTipo() {
         return tipo;
     }
 
-    protected void setTipo(String tipo) {
+    private void setTipo(String tipo) {
         this.tipo = tipo;
     }
 
-    protected double getPreco() {
+    public double getPreco() {
         return preco;
     }
 
-    protected void setPreco(double preco) {
+    private void setPreco(double preco) {
         this.preco = preco;
     }
 
-    protected void entrada() {
+    protected void entradaDados() {
 
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Digite a peso do motor: ");
         setPeso(Double.parseDouble(scan.nextLine()));
-
         System.out.print("Digite o Rpm do motor: ");
         setRpm(Integer.parseInt(scan.nextLine()));
 
@@ -96,12 +97,10 @@ class Motor {
 
         System.out.print("Digite a tipo do motor: ");
         setTipo(scan.nextLine());
-
-        scan.close();
     }
 
     // imprimir dados
-    protected void imprimir() {
+    public void imprimir() {
 
         System.out.println("Peso do Motor: " + getPeso());
         System.out.println("Rpm do Motor: " + getRpm());

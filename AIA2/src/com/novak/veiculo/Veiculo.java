@@ -62,7 +62,7 @@ class Veiculo {
     }
 
     // getters and setters
-    protected  String getMarca() {
+    public  String getMarca() {
         return marca;
     }
 
@@ -70,7 +70,7 @@ class Veiculo {
         this.marca = marca;
     }
 
-    protected  String getModelo() {
+    public  String getModelo() {
         return modelo;
     }
 
@@ -78,7 +78,7 @@ class Veiculo {
         this.modelo = modelo;
     }
 
-    protected  String getCor() {
+    public  String getCor() {
         return cor;
     }
 
@@ -86,7 +86,7 @@ class Veiculo {
         this.cor = cor;
     }
 
-    protected  double getPreco() {
+    public  double getPreco() {
         return preco;
     }
 
@@ -94,7 +94,7 @@ class Veiculo {
         this.preco = preco;
     }
 
-    protected  double getLargura() {
+    public  double getLargura() {
         return largura;
     }
 
@@ -102,7 +102,7 @@ class Veiculo {
         this.largura = largura;
     }
 
-    protected  double getComprimento() {
+    public  double getComprimento() {
         return comprimento;
     }
 

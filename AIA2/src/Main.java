@@ -10,13 +10,12 @@ import java.util.List;
 
 public class Main {
   public static void main(String[] args) {
-    List<Aviao> aviaoList = new ArrayList<Aviao>();
-    List<Lancha> lanchaList = new ArrayList<Lancha>();
-    List<Carro> carroList = new ArrayList<Carro>();
+    List<Aviao> aviaoList = new ArrayList<>();
+    List<Lancha> lanchaList = new ArrayList<>();
+    List<Carro> carroList = new ArrayList<>();
 
     Scanner scan = new Scanner(System.in);
-    char veic;
-    veic = 't';
+    char veic = 't';
     char isLoopCad = 't';
     char isLoopObj = 't';
     do {
@@ -35,7 +34,7 @@ public class Main {
           System.out.println("----------------------------");
           System.out.println("Informações da Lancha");
           System.out.println("----------------------------");
-          lancha.entrada();
+          lancha.entradaDados();
           System.out.println("----------------------------");
           lancha.imprimir();
           lanchaList.add(lancha);
@@ -51,7 +50,7 @@ public class Main {
           System.out.println("----------------------------");
           System.out.println("Informações do Aviao");
           System.out.println("----------------------------");
-          aviao.entrada();
+          aviao.entradaDados();
           System.out.println("----------------------------");
           aviao.imprimir();
           aviaoList.add(aviao);
@@ -67,7 +66,7 @@ public class Main {
           System.out.println("----------------------------");
           System.out.println("Informações do Carro");
           System.out.println("----------------------------");
-          carro.entrada();
+          carro.entradaDados();
           System.out.println("----------------------------");
           carro.imprimir();
           carroList.add(carro);
@@ -88,13 +87,13 @@ public class Main {
       i.imprimir();
       System.out.println("----------------------------");
     }
-    System.out.println("-------------Jetski-----------");
+    System.out.println("-------------Aviao-----------");
     for (Aviao i : aviaoList) {
       System.out.println("----------------------------");
       i.imprimir();
       System.out.println("----------------------------");
     }
-    System.out.println("-------------Iate------------");
+    System.out.println("-------------Carro------------");
     for (Carro i : carroList) {
       System.out.println("----------------------------");
       i.imprimir();
