@@ -1,5 +1,6 @@
 package AIA2.src.com.novak.veiculo;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
@@ -85,18 +86,55 @@ class Motor{
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Digite a peso do motor: ");
-        setPeso(Double.parseDouble(scan.nextLine()));
+        try{
+            setPeso(Double.parseDouble(scan.nextLine()));
+        }catch(InputMismatchException | NullPointerException inputMismatchException){
+            System.out.println("digite uma entrada valida");
+            System.out.print("Digite a peso do motor: ");
+            setPeso(Double.parseDouble(scan.nextLine()));
+        }
+
         System.out.print("Digite o Rpm do motor: ");
-        setRpm(Integer.parseInt(scan.nextLine()));
+        try{
+            setRpm(Integer.parseInt(scan.nextLine()));
+        }catch(InputMismatchException | NullPointerException inputMismatchException){
+            System.out.println("digite uma entrada valida");
+            System.out.print("Digite o Rpm do motor: ");
+            setRpm(Integer.parseInt(scan.nextLine()));
+        }
 
         System.out.print("Digite o Preço  do motor: ");
-        setPreco(Double.parseDouble(scan.nextLine()));
+        try{
+            setPreco(Double.parseDouble(scan.nextLine()));
+        }catch(InputMismatchException | NullPointerException inputMismatchException){
+            System.out.println("digite uma entrada valida");
+            System.out.print("Digite o Preço  do motor: ");
+            setPreco(Double.parseDouble(scan.nextLine()));
+        }
 
         System.out.print("Digite a velocidade do motor: ");
-        setVelocidade(Integer.parseInt(scan.nextLine()));
+        try{
+            setVelocidade(Integer.parseInt(scan.nextLine()));
+        }catch(InputMismatchException | NullPointerException inputMismatchException){
+            System.out.println("digite uma entrada valida");
+            System.out.print("Digite a velocidade do motor: ");
+            setVelocidade(Integer.parseInt(scan.nextLine()));
+        }
+
 
         System.out.print("Digite a tipo do motor: ");
-        setTipo(scan.nextLine());
+        try{
+            setTipo(scan.nextLine());
+            if(tipo.length()== 0){
+                throw new IllegalArgumentException("Digite algo");
+            }
+        }catch(InputMismatchException | NullPointerException | IllegalArgumentException inputMismatchException){
+            System.out.println("digite uma entrada valida");
+            System.out.print("Digite a tipo do motor: ");
+            setTipo(scan.nextLine());
+        }
+
+
     }
 
     // imprimir dados

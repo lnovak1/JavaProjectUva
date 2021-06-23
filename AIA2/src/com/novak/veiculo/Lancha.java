@@ -1,5 +1,6 @@
 package AIA2.src.com.novak.veiculo;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Lancha extends Veiculo implements Desconto{
@@ -166,19 +167,101 @@ public class Lancha extends Veiculo implements Desconto{
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Digite o Nome da lancha: ");
-        setNome(scan.nextLine());
+        try{
+            setNome(scan.nextLine());
+            if(nome.length()== 0){
+                throw new IllegalArgumentException("Digite algo");
+            }
+        }catch(InputMismatchException | NullPointerException inputMismatchException){
+            System.out.println("digite uma entrada valida");
+            System.out.print("Digite o Nome da lancha: ");
+            setNome(scan.nextLine());
+        } catch (IllegalArgumentException illegalArgumentException){
+            System.out.println("digite uma entrada valida   ");
+            System.out.print("Digite o Nome da lancha: ");
+            setNome(scan.nextLine());
+
+        }
+
+
         System.out.print("Digite a Marca da lancha: ");
-        setMarca(scan.nextLine());
+        try{
+            setMarca(scan.nextLine());
+            if(marca.length()== 0){
+                throw new IllegalArgumentException("Digite algo");
+            }
+        }catch(InputMismatchException | NullPointerException inputMismatchException){
+            System.out.println("digite uma entrada valida");
+            System.out.print("Digite a Marca da lancha: ");
+            setMarca(scan.nextLine());
+        } catch (IllegalArgumentException illegalArgumentException){
+            System.out.println("digite uma entrada valida   ");
+            System.out.print("Digite a Marca da lancha: ");
+            setMarca(scan.nextLine());
+
+        }
+
+
         System.out.print("Digite o Modelo da lancha: ");
-        setModelo(scan.nextLine());
+        try{
+            setModelo(scan.nextLine());
+            if(modelo.length()== 0){
+                throw new IllegalArgumentException("Digite algo");
+            }
+        }catch(InputMismatchException | IllegalArgumentException | NullPointerException inputMismatchException){
+            System.out.println("digite uma entrada valida");
+            System.out.print("Digite o Modelo da lancha: ");
+            setModelo(scan.nextLine());
+        }
+
+
         System.out.print("Digite o Preco  da lancha: ");
-        setPreco(Double.parseDouble(scan.nextLine()));
+        try{
+            setPreco(Double.parseDouble(scan.nextLine()));
+        }catch(InputMismatchException | NullPointerException inputMismatchException){
+            System.out.println("digite uma entrada valida");
+            System.out.print("Digite o Preco  da lancha: ");
+            setPreco(Double.parseDouble(scan.nextLine()));
+        }
+
+
         System.out.print("Digite a Cor da lancha: ");
-        setCor(scan.nextLine());
+        try{
+            setCor(scan.nextLine());
+            if(cor.length()== 0){
+                throw new IllegalArgumentException("Digite algo");
+            }
+        }catch(InputMismatchException | NullPointerException inputMismatchException){
+            System.out.println("digite uma entrada valida");
+            System.out.print("Digite a Cor da lancha: ");
+            setCor(scan.nextLine());
+        } catch (IllegalArgumentException illegalArgumentException){
+            System.out.println("digite uma entrada valida   ");
+            System.out.print("Digite a Cor da lancha: ");
+            setCor(scan.nextLine());
+
+        }
+
+
         System.out.print("Digite a largura da lancha: ");
-        setLargura(Double.parseDouble(scan.nextLine()));
+        try{
+            setLargura(Double.parseDouble(scan.nextLine()));
+        }catch(InputMismatchException | NullPointerException inputMismatchException){
+            System.out.println("digite uma entrada valida");
+            System.out.print("Digite a largura da lancha: ");
+            setLargura(Double.parseDouble(scan.nextLine()));
+        }
+
+
         System.out.print("Digite a comprimento da lancha: ");
-        setComprimento(Double.parseDouble(scan.nextLine()));
+        try{
+            setComprimento(Double.parseDouble(scan.nextLine()));
+        }catch(InputMismatchException | NullPointerException inputMismatchException){
+            System.out.println("digite uma entrada valida");
+            System.out.print("Digite a comprimento da lancha: ");
+            setComprimento(Double.parseDouble(scan.nextLine()));
+        }
+
         System.out.println("dados do motor 1:");
         this.motor1.entradaDados();
         System.out.println("dados do motor 2:");

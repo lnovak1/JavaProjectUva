@@ -1,5 +1,6 @@
 package AIA2.src.com.novak.veiculo;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Carro extends Veiculo implements Desconto {
@@ -43,20 +44,80 @@ public class Carro extends Veiculo implements Desconto {
 
         Scanner scan = new Scanner(System.in);
         System.out.print("Digite a Marca do Carro: ");
-        setMarca(scan.nextLine());
+        try{
+            setMarca(scan.nextLine());
+            if(marca.length()== 0){
+                throw new IllegalArgumentException("Digite algo");
+            }
+        }catch(InputMismatchException | NullPointerException | IllegalArgumentException inputMismatchException){
+            System.out.println("digite uma entrada valida");
+            System.out.print("Digite a Marca do Carro: ");
+            setMarca(scan.nextLine());
+        }
+
         System.out.print("Digite o Modelo do Carro: ");
-        setModelo(scan.nextLine());
+        try{
+            setModelo(scan.nextLine());
+            if(modelo.length()== 0){
+                throw new IllegalArgumentException("Digite algo");
+            }
+        }catch(InputMismatchException | NullPointerException | IllegalArgumentException inputMismatchException){
+            System.out.println("digite uma entrada valida");
+            System.out.print("Digite o Modelo do Carro: ");
+            setModelo(scan.nextLine());
+        }
+
         System.out.print("Digite o Preco  do Carro: ");
-        setPreco(Double.parseDouble(scan.nextLine()));
+        try{
+            setPreco(Double.parseDouble(scan.nextLine()));
+        }catch(InputMismatchException | NullPointerException inputMismatchException){
+            System.out.println("digite uma entrada valida");
+            System.out.print("Digite o Preco  do Carro: ");
+            setPreco(Double.parseDouble(scan.nextLine()));
+        }
+
         System.out.print("Digite a Cor do Carro: ");
-        setCor(scan.nextLine());
+        try{
+            setCor(scan.nextLine());
+            if(cor.length()== 0){
+                throw new IllegalArgumentException("Digite algo");
+            }
+        }catch(InputMismatchException | NullPointerException | IllegalArgumentException inputMismatchException){
+            System.out.println("digite uma entrada valida");
+            System.out.print("Digite a Cor do Carro: ");
+            setCor(scan.nextLine());
+        }
+
         System.out.print("Digite a largura do Carro: ");
-        setLargura(Double.parseDouble(scan.nextLine()));
-        System.out.print("Digite a comprimento do Carro: ");
-        setComprimento(Double.parseDouble(scan.nextLine()));
+        try{
+            setLargura(Double.parseDouble(scan.nextLine()));
+        }catch(InputMismatchException | NullPointerException inputMismatchException){
+            System.out.println("digite uma entrada valida");
+            System.out.print("Digite a largura do Carro: ");
+            setLargura(Double.parseDouble(scan.nextLine()));
+        }
+
+        System.out.print("Digite o comprimento do Carro: ");
+        try{
+            setComprimento(Double.parseDouble(scan.nextLine()));
+        }catch(InputMismatchException | NullPointerException inputMismatchException){
+            System.out.println("digite uma entrada valida");
+            System.out.print("Digite o comprimento do Carro: ");
+            setComprimento(Double.parseDouble(scan.nextLine()));
+        }
 
         System.out.print("Digite a Placa do Carro: ");
-        setPlaca(scan.nextLine());
+        try{
+            setPlaca(scan.nextLine());
+            if(placa.length()== 0){
+                throw new IllegalArgumentException("Digite algo");
+            }
+        }catch(InputMismatchException | NullPointerException | IllegalArgumentException inputMismatchException){
+            System.out.println("digite uma entrada valida");
+            System.out.print("Digite a Placa do Carro: ");
+            setPlaca(scan.nextLine());
+        }
+
         System.out.println("dados do motor 1:");
         this.motor1.entradaDados();
 
